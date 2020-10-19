@@ -30,7 +30,7 @@
     <execution />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="2514" />
+    <option name="totalTimeSeconds" value="16124" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -40,6 +40,8 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="ADD_SUFFIX_TO_CHERRY_PICKS_OF_PUBLISHED_COMMITS" value="false" />
+    <option name="PREVIEW_PUSH_ON_COMMIT_AND_PUSH" value="false" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1iYEipESZBQIBJj4r2kOP4J8xsz" />
@@ -56,6 +58,7 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -70,7 +73,7 @@
       <workItem from="1602076257828" duration="3883000" />
       <workItem from="1602437783779" duration="649000" />
       <workItem from="1602442293720" duration="40000" />
-      <workItem from="1602682322505" duration="1667000" />
+      <workItem from="1602682322505" duration="4383000" />
     </task>
     <servers />
   </component>
@@ -89,10 +92,27 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+  </component>
   <component name="WindowStateProjectService">
+    <state x="372" y="383" key="#Notifications" timestamp="1602700096850">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="372" y="383" key="#Notifications/0.0.1920.1040/1920.0.2560.1400@0.0.1920.1040" timestamp="1602700096850" />
+    <state x="279" y="275" key="FileChooserDialogImpl" timestamp="1602700142069">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="279" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.2560.1400@0.0.1920.1040" timestamp="1602700142069" />
     <state x="321" y="443" key="NewPhpFileDialog" timestamp="1602682777446">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="321" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602682777446" />
+    <state x="0" y="165" key="SettingsEditor" timestamp="1602700236778">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.2560.1400@0.0.1920.1040" timestamp="1602700236778" />
   </component>
 </project>
