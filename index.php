@@ -1,6 +1,9 @@
 <?php
 $paginanaam = "index";
-include("nav_header.php");
+$login_vereist = true;
+
+include_once "init.php";
+include_once "nav_header.php";
 
 
 ?>
