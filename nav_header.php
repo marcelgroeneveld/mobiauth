@@ -157,7 +157,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/pasbeheer/" class="nav-link <?php if ($paginanaam == "pasbeheer"){echo 'active';}; ?> ">
+                    <a href="/pasbeheer.php" class="nav-link <?php if ($paginanaam == "pasbeheer"){echo 'active';}; ?> ">
                         <i class="nav-icon fas fa-id-card   "></i>
                         <p>
                             Pasbeheer
