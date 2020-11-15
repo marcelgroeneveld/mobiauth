@@ -455,6 +455,7 @@
 
   $("#loginButton").on('click', function(e)
   {
+    e.preventDefault();
 
     $('.login').addClass('test')
     setTimeout(function(){
@@ -465,14 +466,7 @@
       $(".authent").animate({opacity: 1},{duration: 200, queue: false }).addClass('visible');
     },350);
 
-    setTimeout(function(){
-      $(".authent").show().animate({right:90},{easing : 'easeOutQuint' ,duration: 600, queue: false });
-      $(".authent").animate({opacity: 0},{duration: 200, queue: false }).addClass('visible');
-      $('.login').removeClass('testtwo')
-    },2500);
 
-
-    e.preventDefault();
 
 
     var form = $(this);
@@ -482,58 +476,44 @@
       type: "POST",
       url: url,
       data: form.serialize(), // serializes the form's elements.
-      success: function(data)
-      {
-
-
+      success: function(data) {
+        data = "false";
 
         if (data == "true") {
-          setTimeout(function () {
-            $('.login').removeClass('test')
-            $('.login div').fadeOut(123);
-          }, 2800);
-          setTimeout(function () {
-            $('.success').fadeIn();
 
-          }, 3200);
-
-        } else if(data == "false"){
-
+          setTimeout(function(){
+            $(".authent").show().animate({right:90},{easing : 'easeOutQuint' ,duration: 600, queue: false });
+            $(".authent").animate({opacity: 0},{duration: 200, queue: false }).addClass('visible');
+            $('.login').removeClass('testtwo')
+          },2500);
           setTimeout(function(){
             $('.login').removeClass('test')
             $('.login div').fadeOut(123);
           },2800);
           setTimeout(function(){
-            $('#error').fadeIn();
+            $('.success').fadeIn();
 
           },3200);
-          setTimeout(function()
-          {
-            $('.success').fadeOut(123);
-            $('.login div').fadeIn(123);
-            $('#error').fadeOut();
 
-          }, 8000);
 
-          $('#UsuarioInput,#SenhaInput').focus(function(){
-            $(this).prev().animate({'opacity':'1'},200)
-          });
-          $('#UsuarioInput,#SenhaInput').blur(function(){
-            $(this).prev().animate({'opacity':'.5'},200)
-          });
-          $('#UsuarioInput,#SenhaInput').keyup(function(){
-            if(!$(this).val() == ''){
-              $(this).next().animate({'opacity':'1','right' : '30'},200)
-            } else {
-              $(this).next().animate({'opacity':'0','right' : '20'},200)
-            }
-          });
 
+
+        } else if (data == "false") {
+
+          setTimeout(function(){
+            $(".authent").show().animate({right:90},{easing : 'easeOutQuint' ,duration: 600, queue: false });
+            $(".authent").animate({opacity: 0},{duration: 200, queue: false }).addClass('visible');
+            $('.login').removeClass('testtwo')
+          },2500);
+          setTimeout(function(){
+            $('.login').removeClass('test')
+          },2800);
+          setTimeout(function(){
+            $(".authent").removeClass('visible');
+            $(".authent").hide();
+
+          },3200);
         }
-
-
-
-
       }
     });
 
@@ -543,19 +523,7 @@
   });
 
 
-  $('#UsuarioInput,#SenhaInput').focus(function(){
-    $(this).prev().animate({'opacity':'1'},200)
-  });
-  $('#UsuarioInput,#SenhaInput').blur(function(){
-    $(this).prev().animate({'opacity':'.5'},200)
-  });
-  $('#UsuarioInput,#SenhaInput').keyup(function(){
-    if(!$(this).val() == ''){
-      $(this).next().animate({'opacity':'1','right' : '30'},200)
-    } else {
-      $(this).next().animate({'opacity':'0','right' : '20'},200)
-    }
-  });
+
 
 </script>
 </html>
