@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login - SAAV</title>
+  <title>Login - MobiAuth</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <meta author="">
@@ -20,18 +20,18 @@
   <form id="login_form" action='/login' method='POST' enctype="application/x-www-form-urlencoded">
     <div class='login'>
       <div class='SaavHeader'>
-        <h3>SAAV</h3>
-        <p>Sistema de Analise Audiovisual</p>
+        <h3>MobiAuth</h3>
+        <p>Gelieve in te loggen.</p>
       </div>
       <div class='login_title'>
-        <span>Faça login para acessar o sistema</span>
+        <span>Log alstublieft in met gebruikersnaam en wachtwoord.</span>
       </div>
       <div class='login_fields'>
         <div class='login_fields__user'>
           <div class='icon'>
             <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/user_icon_copy.png'>
           </div>
-          <input placeholder='Usuário' name="email" type='text' id='UsuarioInput'>
+          <input placeholder='Gebruikersnaam' name="email" type='text' id='UsuarioInput'>
           <div class='validation'>
             <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/tick.png'>
           </div>
@@ -41,14 +41,14 @@
           <div class='icon'>
             <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/lock_icon_copy.png'>
           </div>
-          <input placeholder='Senha'name="password" id='SenhaInput' type='password'>
+          <input placeholder='Wachtwoord'name="password" id='SenhaInput' type='password'>
           <div class='validation'>
             <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/tick.png'>
           </div>
         </div>
         <div class='login_fields__submit'>
           <input type='submit' id='loginButton' value='Log In'>                  <div class='forgot'>
-          <a href='/forgot'>Esqueceu a senha?</a>
+          <a href='/forgot'>Wachtwoord en/of gebruikersnaam vergeten?</a>
         </div>
         </div>
       </div>
