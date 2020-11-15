@@ -651,12 +651,13 @@
           setTimeout(function(){
             $('.success').fadeIn();
 
+            $('#checkmark').removeAttr('style');
+            $('.success-checkmark').removeAttr('style');
+            $('.icon-circle').removeAttr('style');
+            $('.icon-fix').removeAttr('style');
+
             $(".check-icon").hide();
             setTimeout(function () {
-              $('#checkmark').removeAttr('style');
-              $('.success-checkmark').removeAttr('style');
-              $('.icon-circle').removeAttr('style');
-              $('.icon-fix').removeAttr('style');
               $(".check-icon").show();
             }, 10);
           },3200);
