@@ -479,16 +479,30 @@
       data: form.serialize(), // serializes the form's elements.
       success: function(data)
       {
-        setTimeout(function(){
-          $('.login').removeClass('test')
-          $('.login div').fadeOut(123);
-        },2800);
-        setTimeout(function(){
-          $('.success').fadeIn();
-
-        },3200);
 
 
+
+        if (data == "true") {
+          setTimeout(function () {
+            $('.login').removeClass('test')
+            $('.login div').fadeOut(123);
+          }, 2800);
+          setTimeout(function () {
+            $('.success').fadeIn();
+
+          }, 3200);
+
+        } else if(data == "false"){
+
+          setTimeout(function(){
+            $('.login').removeClass('test')
+            $('.login div').fadeOut(123);
+          },2800);
+          setTimeout(function(){
+            $('#error').fadeIn();
+
+          },3200);
+        }
 
 
 
