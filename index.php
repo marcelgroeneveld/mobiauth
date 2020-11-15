@@ -1,3 +1,10 @@
+<?php
+include("init.php");
+
+
+?>
+
+
 <!DOCTYPE html>
 <html>
   <head> 
