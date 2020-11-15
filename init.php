@@ -7,6 +7,6 @@ if(!PHP_SESSION_NONE){
 
 
 if (isset($login_vereist) && ($_SESSION['loggedin'] != TRUE)){
-Header("Location: login.php");
+Header("Location: login");
 
 }
