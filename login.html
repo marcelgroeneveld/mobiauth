@@ -456,6 +456,17 @@
 
   $("#loginButton").on('click', function(e)
   {
+
+    $('.login').addClass('test')
+    setTimeout(function(){
+      $('.login').addClass('testtwo')
+    },300);
+    setTimeout(function(){
+      //  $(".authent").show().animate({right:-320},{easing : 'easeOutQuint' ,duration: 600, queue: false });
+      //  $(".authent").animate({opacity: 1},{duration: 200, queue: false }).addClass('visible');
+    },350);
+
+
     e.preventDefault();
 
 
@@ -468,14 +479,14 @@
       data: form.serialize(), // serializes the form's elements.
       success: function(data)
       {
-        $('.login').addClass('test')
         setTimeout(function(){
-          $('.login').addClass('testtwo')
-        },300);
+          $('.login').removeClass('test')
+          $('.login div').fadeOut(123);
+        },2800);
         setTimeout(function(){
-          //  $(".authent").show().animate({right:-320},{easing : 'easeOutQuint' ,duration: 600, queue: false });
-          //  $(".authent").animate({opacity: 1},{duration: 200, queue: false }).addClass('visible');
-        },350);
+          $('.success').fadeIn();
+
+        },3200);
 
 
 
