@@ -57,8 +57,9 @@
         <p>Bem vindo!</p>
       </div>
       <div class='feedback error' id='error'>
-        <h2>Ocorreu um erro, por favor tente novamente.</h2>
-        <p>Boa sorte!</p>
+        <h2>Er is een fout opgetreden.</h2>
+        <p>Uw wachtwoord en/of gebruikersnaam is onjuist.</p>
+        <p>U kunt over 5 seconden opnieuw proberen.</p>
 
       </div>
       <div class='disclaimer'>
@@ -506,6 +507,11 @@
             $('#error').fadeIn();
 
           },3200);
+          setTimeout(function()
+          {
+            $('#error').fadeOut();
+
+          }, 4000);
         }
 
 
