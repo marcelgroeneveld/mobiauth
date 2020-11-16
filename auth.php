@@ -3,8 +3,6 @@
 if(PHP_SESSION_NONE){
     session_start();
 }
-$username = $_POST['username'];
-$password = $_POST['password'];
 
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'mobiauth';
@@ -20,8 +18,12 @@ if ( mysqli_connect_errno() ) {
 
 }
 if ( !isset($_POST['username'], $_POST['password']) ) {
-echo 'false';
+echo 'falsee';
 }
+
+
+$username = $_POST['username'];
+$password = $_POST['password'];
 
 if ($stmt = $con->prepare('SELECT uid, password FROM users WHERE username = ?')) {
     // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
