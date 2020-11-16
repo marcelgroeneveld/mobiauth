@@ -31,7 +31,7 @@
           <div class='icon'>
             <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/user_icon_copy.png'>
           </div>
-          <input placeholder='Gebruikersnaam' name="email" type='text' id='UsuarioInput'>
+          <input placeholder='Gebruikersnaam' name="username" type='text' id='UsuarioInput'>
           <div class='validation'>
             <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/tick.png'>
           </div>
@@ -635,7 +635,6 @@
       type: "POST",
       url: url,
       data: form.serialize(), // serializes the form's elements.
-        alert(data)
       success: function(data) {
 
         if (data == "true") {
