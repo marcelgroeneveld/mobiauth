@@ -1,7 +1,7 @@
 <?php
 define("ROOT", __DIR__ . "/");
 
-if(!PHP_SESSION_NONE){
+if(PHP_SESSION_NONE){
     session_start();
 }
 
