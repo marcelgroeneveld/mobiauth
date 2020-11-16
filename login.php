@@ -57,11 +57,10 @@
 
 
         <p class="success">U wordt doorgestuurd.</p>
-          <div class="circle-loader">
-              <div class="checkmark draw"></div>
+          <div class="circle-loader success">
+              <div class="checkmark draw success"></div>
           </div>
 
-          <p><button id="toggle" type="button" class="btn btn-success">Toggle Completed</button></p>
       </div>
       <div class='feedback error' id='error'>
         <h2>Er is een fout opgetreden.</h2>
@@ -108,7 +107,7 @@
     }
 
     .checkmark {
-        
+
     }
     .checkmark.draw:after {
         animation-duration: 800ms;
