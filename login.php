@@ -575,10 +575,10 @@
                 $('.circle-loader').toggleClass('load-complete');
                 $('.checkmark').toggle();
 
-          },3500);
+          },4000);
 
           setTimeout(function(){
-              //  window.location.replace("https://mobiauth.nl");
+                window.location.replace("https://mobiauth.nl");
 
 
             },5000);
