@@ -108,7 +108,7 @@
     }
 
     .checkmark {
-        display: none;
+        
     }
     .checkmark.draw:after {
         animation-duration: 800ms;
