@@ -40,13 +40,9 @@ session_destroy();
 
         wait(1000).then(() => {
             clearText()
-            typeText('Hello, ').then(typeLoop)
+            typeText('U bent uitgelogd.');
         })
 
-        function typeLoop() {
-            typeText('U bent uitgelogd.')
-                
-        }
 
     }
 
@@ -138,6 +134,6 @@ session_destroy();
     setTimeout(function () {
         window.location.href= 'https://mobiauth.nl'; // the redirect goes here
 
-    },4000); // 5 seconds
+    },6000); // 5 seconds
 </script>
 </html>

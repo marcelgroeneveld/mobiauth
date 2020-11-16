@@ -88,160 +88,83 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
 <style>
-  success-checkmark {
-    width: 80px;
-    height: 115px;
-    margin: 0 auto;
 
-  .check-icon {
-    width: 80px;
-    height: 80px;
-    position: relative;
-    border-radius: 50%;
-    box-sizing: content-box;
-    border: 4px solid #4CAF50;
 
-  &::before {
-     top: 3px;
-     left: -2px;
-     width: 30px;
-     transform-origin: 100% 50%;
-     border-radius: 100px 0 0 100px;
-   }
+    .circle-loader {
+        margin-bottom: 3.5em;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-left-color: #5cb85c;
+        animation: loader-spin 1.2s infinite linear;
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        border-radius: 50%;
+        width: 7em;
+        height: 7em;
+    }
 
-  &::after {
-     top: 0;
-     left: 30px;
-     width: 60px;
-     transform-origin: 0 50%;
-     border-radius: 0 100px 100px 0;
-     animation: rotate-circle 4.25s ease-in;
-   }
+    .load-complete {
+        -webkit-animation: none;
+        animation: none;
+        border-color: #5cb85c;
+        transition: border 500ms ease-out;
+    }
 
-  &::before, &::after {
-                content: '';
-                height: 100px;
-                position: absolute;
-                background: #FFFFFF;
-                transform: rotate(-45deg);
-              }
+    .checkmark {
+        display: none;
+    }
+    .checkmark.draw:after {
+        animation-duration: 800ms;
+        animation-timing-function: ease;
+        animation-name: checkmark;
+        transform: scaleX(-1) rotate(135deg);
+    }
+    .checkmark:after {
+        opacity: 1;
+        height: 3.5em;
+        width: 1.75em;
+        transform-origin: left top;
+        border-right: 3px solid #5cb85c;
+        border-top: 3px solid #5cb85c;
+        content: '';
+        left: 1.75em;
+        top: 3.5em;
+        position: absolute;
+    }
 
-  .icon-line {
-    height: 5px;
-    background-color: #4CAF50;
-    display: block;
-    border-radius: 2px;
-    position: absolute;
-    z-index: 10;
+    @keyframes loader-spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes checkmark {
+        0% {
+            height: 0;
+            width: 0;
+            opacity: 1;
+        }
+        20% {
+            height: 0;
+            width: 1.75em;
+            opacity: 1;
+        }
+        40% {
+            height: 3.5em;
+            width: 1.75em;
+            opacity: 1;
+        }
+        100% {
+            height: 3.5em;
+            width: 1.75em;
+            opacity: 1;
+        }
+    }
 
-  &.line-tip {
-     top: 46px;
-     left: 14px;
-     width: 25px;
-     transform: rotate(45deg);
-     animation: icon-line-tip 0.75s;
-   }
 
-  &.line-long {
-     top: 38px;
-     right: 8px;
-     width: 47px;
-     transform: rotate(-45deg);
-     animation: icon-line-long 0.75s;
-   }
-  }
-
-  .icon-circle {
-    top: -4px;
-    left: -4px;
-    z-index: 10;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    position: absolute;
-    box-sizing: content-box;
-    border: 4px solid rgba(76, 175, 80, .5);
-  }
-
-  .icon-fix {
-    top: 8px;
-    width: 5px;
-    left: 26px;
-    z-index: 1;
-    height: 85px;
-    position: absolute;
-    transform: rotate(-45deg);
-    background-color: #FFFFFF;
-  }
-  }
-  }
-
-  @keyframes rotate-circle {
-    0% {
-      transform: rotate(-45deg);
-    }
-    5% {
-      transform: rotate(-45deg);
-    }
-    12% {
-      transform: rotate(-405deg);
-    }
-    100% {
-      transform: rotate(-405deg);
-    }
-  }
-
-  @keyframes icon-line-tip {
-    0% {
-      width: 0;
-      left: 1px;
-      top: 19px;
-    }
-    54% {
-      width: 0;
-      left: 1px;
-      top: 19px;
-    }
-    70% {
-      width: 50px;
-      left: -8px;
-      top: 37px;
-    }
-    84% {
-      width: 17px;
-      left: 21px;
-      top: 48px;
-    }
-    100% {
-      width: 25px;
-      left: 14px;
-      top: 45px;
-    }
-  }
-
-  @keyframes icon-line-long {
-    0% {
-      width: 0;
-      right: 46px;
-      top: 54px;
-    }
-    65% {
-      width: 0;
-      right: 46px;
-      top: 54px;
-    }
-    84% {
-      width: 55px;
-      right: 0px;
-      top: 35px;
-    }
-    100% {
-      width: 47px;
-      right: 8px;
-      top: 38px;
-    }
-  }
-  @import "@material/textfield/mdc-text-field";
+    @import "@material/textfield/mdc-text-field";
   @import url(https://fonts.googleapis.com/css?family=Gudea:400,700);
 
   #LoginContent
