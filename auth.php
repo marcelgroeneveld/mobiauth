@@ -23,7 +23,7 @@ if ( !isset($_POST['username'], $_POST['password']) ) {
 echo 'false';
 }
 
-if ($stmt = $con->prepare('SELECT uid, password FROM accounts WHERE username = ?')) {
+if ($stmt = $con->prepare('SELECT uid, password FROM users WHERE username = ?')) {
     // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
     $stmt->bind_param('s', $username);
     $stmt->execute();
@@ -45,7 +45,7 @@ if ($stmt = $con->prepare('SELECT uid, password FROM accounts WHERE username = ?
             echo 'true';
         } else {
             // Incorrect password
-            echo 'pass incorrect';
+            echo 'false';
         }
     } else {
         // Incorrect username
