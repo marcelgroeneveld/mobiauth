@@ -634,7 +634,7 @@
     $.ajax({
       type: "POST",
       url: url,
-      data: form.serialize(), // serializes the form's elements.
+      data: form.serialize(),
       success: function(data) {
 
         if (data == "true") {
