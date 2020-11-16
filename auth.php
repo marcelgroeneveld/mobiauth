@@ -45,7 +45,7 @@ if ($stmt = $con->prepare('SELECT uid, password FROM accounts WHERE username = ?
             echo 'true';
         } else {
             // Incorrect password
-            echo 'false';
+            echo 'pass incorrect';
         }
     } else {
         // Incorrect username
