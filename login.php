@@ -87,27 +87,27 @@
 
 
     .circle-loader {
-        margin-bottom: 3.5em;
-        border: 1px solid rgba(0, 0, 0, 0.2);
+        margin-bottom: 3.5em !important;
+        border: 1px solid rgba(0, 0, 0, 0.2) !important;
         border-left-color: #5cb85c;
-        animation: loader-spin 1.2s infinite linear;
-        position: relative;
-        display: inline-block;
-        vertical-align: top;
-        border-radius: 50%;
-        width: 7em;
-        height: 7em;
+        animation: loader-spin 1.2s infinite linear !important;
+        position: relative !important;
+        display: inline-block !important;
+        vertical-align: top !important;
+        border-radius: 50% !important;
+        width: 7em !important;
+        height: 7em !important;
     }
 
     .load-complete {
-        -webkit-animation: none;
-        animation: none;
-        border-color: #5cb85c;
-        transition: border 500ms ease-out;
+        -webkit-animation: none !important;
+        animation: none !important;
+        border-color: #5cb85c !important;
+        transition: border 500ms ease-out !important;
     }
 
     .checkmark {
-
+        display: none !important;
     }
     .checkmark.draw:after {
         animation-duration: 800ms;
