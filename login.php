@@ -58,7 +58,7 @@
 
         <p class="success">U wordt doorgestuurd.</p>
           <div class="circle-loader success">
-              <div class="checkmark draw success"></div>
+              <div id="checkmark_div" class="checkmark draw success"></div>
           </div>
 
       </div>
@@ -569,8 +569,15 @@
           },2800);
           setTimeout(function(){
             $('.success').fadeIn();
+              $('#checkmark_div').removeAttr('style');
 
-          },3200);setTimeout(function(){
+          },3200); setTimeout(function(){
+                $('.circle-loader').toggleClass('load-complete');
+                $('.checkmark').toggle();
+
+          },3500);
+
+          setTimeout(function(){
               //  window.location.replace("https://mobiauth.nl");
 
 
