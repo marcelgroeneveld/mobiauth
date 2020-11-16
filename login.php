@@ -571,7 +571,7 @@
             $('.success').fadeIn();
 
           },3200);setTimeout(function(){
-                window.location.replace("https://mobiauth.nl");
+              //  window.location.replace("https://mobiauth.nl");
 
 
             },5000);
