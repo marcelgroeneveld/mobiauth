@@ -635,8 +635,9 @@
       type: "POST",
       url: url,
       data: form.serialize(), // serializes the form's elements.
-      success: function(data) {
         alert(data)
+      success: function(data) {
+
         if (data == "true") {
 
           setTimeout(function(){
