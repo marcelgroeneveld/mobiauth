@@ -57,14 +57,11 @@
 
 
         <p class="success">U wordt doorgestuurd.</p>
-        <div id="checkmark"><div class="success-checkmark">
-          <div class="check-icon">
-            <span class="icon-line line-tip"></span>
-            <span class="icon-line line-long"></span>
-            <div class="icon-circle"></div>
-            <div class="icon-fix"></div>
+          <div class="circle-loader">
+              <div class="checkmark draw"></div>
           </div>
-        </div></div>
+
+          <p><button id="toggle" type="button" class="btn btn-success">Toggle Completed</button></p>
       </div>
       <div class='feedback error' id='error'>
         <h2>Er is een fout opgetreden.</h2>
