@@ -26,10 +26,9 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 
 if ($stmt = $con->prepare('SELECT uid, password, voornaam, achternaam, 2fa, FROM users WHERE username = ?')) {
-    // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
+    // Bind parameters (s = string, i = int, b = blob).
     $stmt->bind_param('s', $username);
     $stmt->execute();
-    // Store the result so we can check if the account exists in the database.
     $stmt->store_result();
 
     if ($stmt->num_rows > 0) {
@@ -45,11 +44,11 @@ if ($stmt = $con->prepare('SELECT uid, password, voornaam, achternaam, 2fa, FROM
             $_SESSION['tfa'] = $tfa;
             echo 'true';
         } else {
-            // Incorrect password
+            // Hier is wachtwoord onjuist
             echo 'false';
         }
     } else {
-        // Incorrect username
+        // hier is gebruikersnaam niet juist
         echo 'false';
     }
 
