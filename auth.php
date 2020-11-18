@@ -18,14 +18,14 @@ if ( mysqli_connect_errno() ) {
 
 }
 if ( !isset($_POST['username'], $_POST['password']) ) {
-echo 'falsee';
+echo 'false';
 }
 
 
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-if ($stmt = $con->prepare('SELECT uid, password FROM users WHERE username = ?')) {
+if ($stmt = $con->prepare('SELECT uid, password, voornaam, achternaam, 2fa, FROM users WHERE username = ?')) {
     // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
     $stmt->bind_param('s', $username);
     $stmt->execute();
@@ -33,17 +33,16 @@ if ($stmt = $con->prepare('SELECT uid, password FROM users WHERE username = ?'))
     $stmt->store_result();
 
     if ($stmt->num_rows > 0) {
-        $stmt->bind_result($id, $password);
+        $stmt->bind_result($id, $password, $voornaam, $achternaam, $tfa);
         $stmt->fetch();
-        // Account exists, now we verify the password.
-        // Note: remember to use password_hash in your registration file to store the hashed passwords.
-        if (password_verify($_POST['password'], $password)) {
-            // Verification success! User has loggedin!
-            // Create sessions so we know the user is logged in, they basically act like cookies but remember the data on the server.
-            session_regenerate_id();
+              if (password_verify($_POST['password'], $password)) {
+                       session_regenerate_id();
             $_SESSION['loggedin'] = TRUE;
             $_SESSION['name'] = $_POST['username'];
             $_SESSION['uid'] = $id;
+            $_SESSION['voornaam'] = $voornaam;
+            $_SESSION['achternaam'] = $achternaam;
+            $_SESSION['tfa'] = $tfa;
             echo 'true';
         } else {
             // Incorrect password
