@@ -1,6 +1,5 @@
 <?php
 
-echo 'test';
 
 if(PHP_SESSION_NONE){
     session_start();
@@ -55,4 +54,6 @@ if ($stmt = $con->prepare('SELECT uid, password, voornaam, achternaam, 2fa, FROM
     }
 
     $stmt->close();
+}else {
+    echo 'buh';
 }
