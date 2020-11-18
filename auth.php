@@ -1,5 +1,7 @@
 <?php
 
+echo 'test';
+
 if(PHP_SESSION_NONE){
     session_start();
 }
