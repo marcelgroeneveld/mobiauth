@@ -26,10 +26,11 @@ if ( !isset($_POST['username'], $_POST['password']) ) {
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-if ($stmt = $con->prepare('SELECT uid, password, voornaam, achternaam, 2fa, FROM users WHERE username = ?')) {
+if ($stmt = $con->prepare('SELECT uid, password, voornaam, achternaam, 2fa FROM users WHERE username = ?')) {
     // Bind parameters (s = string, i = int, b = blob)
     $stmt->bind_param('s', $username);
     $stmt->execute();
+
     $stmt->store_result();
 
     if ($stmt->num_rows > 0) {
@@ -55,5 +56,4 @@ if ($stmt = $con->prepare('SELECT uid, password, voornaam, achternaam, 2fa, FROM
 
     $stmt->close();
 }else {
-    echo 'buh';
 }

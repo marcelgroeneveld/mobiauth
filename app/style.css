@@ -1,0 +1,86 @@
+body {
+    background-color: #525252 !important;
+}
+
+/* login_section */
+
+#login_section {
+    margin-top: 200px;
+}
+
+.logo {
+    width: 250px;
+}
+
+.inputs_login{
+    margin-top: 100px;
+}
+
+.input_login {
+    margin-top: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    color: #FFFFFF;
+    background-color: #313131;
+}
+
+.button_login {
+    margin-top: 25px !important;
+    padding: 10px 20px 10px 20px !important;
+}
+
+/* card_section */
+
+#card_section {
+    margin-top: 10px
+}
+
+.card {
+    width: 250px;
+}
+
+.click_card {
+    margin-top: 150px;
+}
+
+/* fingerprint_section */
+
+#fingerprint_section {
+    margin-top: 200px;
+}
+
+.fingerprint {
+    width: 150px;
+    -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+    animation: fadein 3s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* scan_section */
+
+#scan_section {
+    margin-top: 50px;
+}
+
+.mobile_icon {
+    margin-top: 150px;
+    width: 150px;
+    -webkit-animation: action 1s infinite  alternate;
+    animation: action 1s infinite  alternate;
+}
+
+@-webkit-keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+@keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+/* ---------- */
