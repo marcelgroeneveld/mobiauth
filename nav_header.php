@@ -183,6 +183,8 @@ $paginas = array
 
 
 foreach($paginas as $value){
+    echo $paginanaam;
+    
     echo '<li'; if($paginanaam == $value["php_url"]){ echo ' class="active"';} echo '><a href="' . $value["url"] .'"> <i class="icon-home"></i>' . $value["titel"] .' </a></li>';
 }
 ?>
