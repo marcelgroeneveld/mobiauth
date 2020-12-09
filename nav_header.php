@@ -205,3 +205,6 @@ foreach($paginas as $value){
     </nav>
 
             -->
+    
+            </li>
+        </nav>
