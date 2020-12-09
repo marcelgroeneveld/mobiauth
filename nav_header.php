@@ -160,7 +160,7 @@
 
 
 <?php
-$paginanaam = basename(basename($_SERVER['PHP_SELF']), '.php');
+$paginanaam = basename($_SERVER['PHP_SELF']));
 $paginas = array
 (
 
@@ -184,7 +184,7 @@ $paginas = array
 
 foreach($paginas as $value){
     echo $paginanaam;
-    
+
     echo '<li'; if($paginanaam == $value["php_url"]){ echo ' class="active"';} echo '><a href="' . $value["url"] .'"> <i class="icon-home"></i>' . $value["titel"] .' </a></li>';
 }
 ?>
