@@ -160,7 +160,7 @@
 
 
 <?php
-$paginanaam = basename($_SERVER['PHP_SELF']));
+$paginanaam = basename($_SERVER['PHP_SELF']);
 $paginas = array
 (
 
