@@ -179,7 +179,7 @@ $paginas = array
 
 
 foreach($paginas as $value){
-    echo '<li'; if($paginanaam == $value["url"]){ echo ' class="active"'}; echo '><a href="index.html"> <i class="icon-home"></i>Home </a></li>';
+    echo '<li'; if($paginanaam == $value["url"]){ echo ' class="active"';} echo '><a href="index.html"> <i class="icon-home"></i>Home </a></li>';
     echo $value["url"];
 }
 ?>
