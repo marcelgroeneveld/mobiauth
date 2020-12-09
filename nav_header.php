@@ -179,11 +179,11 @@ $paginas = array
 
 
 foreach($paginas as $value){
-    echo '<li'; if($paginanaam == $value["url"]){ echo ' class="active"';} echo '><a href="index.html"> <i class="icon-home"></i>Home </a></li>';
+    echo '<li'; if($paginanaam == $value["url"]){ echo ' class="active"';} echo '><a href="' . $value["url"] .'"> <i class="icon-home"></i>' . $value["titel"] .' </a></li>';
     echo $value["url"];
 }
 ?>
-
+<!--
             <li class="active"><a href="index.html"> <i class="icon-home"></i>Home </a></li>
             <li><a href="/gebruikers"> <i class="icon-user"></i>Gebruikers </a></li>
             <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts </a></li>
@@ -203,3 +203,5 @@ foreach($paginas as $value){
             <li> <a href="#"> <i class="icon-chart"></i>Demo </a></li>
         </ul>
     </nav>
+
+            -->
