@@ -30,7 +30,7 @@
     <execution />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="33055" />
+    <option name="totalTimeSeconds" value="33923" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -87,7 +87,7 @@
       <workItem from="1605712281172" duration="2027000" />
       <workItem from="1606253325283" duration="1838000" />
       <workItem from="1606312513982" duration="718000" />
-      <workItem from="1607519715878" duration="4435000" />
+      <workItem from="1607519715878" duration="5298000" />
     </task>
     <servers />
   </component>
@@ -128,5 +128,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.2560.1400@0.0.1920.1040" timestamp="1602700236778" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1607524794066">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607524794066" />
   </component>
 </project>

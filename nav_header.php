@@ -163,15 +163,19 @@ echo basename($_SERVER['PHP_SELF']);
 $paginanaam = basename('test.php', '.php');
 $paginas = array
 (
+
     "home" => array
     (
-        "url" => "mobiauth.nl",
+        "url" => "https://mobiauth.nl",
+        "php_url" => "index.php",
         "titel" => "Home",
         "icon" => "",
+
     ),
     "gebruikers" => array
     (
         "url" => "/gebruikers",
+        "php_url" => "gebruikers.php",
         "titel" => "Gebruikers",
         "icon" => "",
     )
@@ -179,10 +183,10 @@ $paginas = array
 
 
 foreach($paginas as $value){
-    echo '<li'; if($paginanaam == $value["url"]){ echo ' class="active"';} echo '><a href="' . $value["url"] .'"> <i class="icon-home"></i>' . $value["titel"] .' </a></li>';
-    echo $value["url"];
+    echo '<li'; if($paginanaam == $value["php_url"]){ echo ' class="active"';} echo '><a href="' . $value["url"] .'"> <i class="icon-home"></i>' . $value["titel"] .' </a></li>';
 }
 ?>
+
 <!--
             <li class="active"><a href="index.html"> <i class="icon-home"></i>Home </a></li>
             <li><a href="/gebruikers"> <i class="icon-user"></i>Gebruikers </a></li>
@@ -205,6 +209,6 @@ foreach($paginas as $value){
     </nav>
 
             -->
-    
+
             </li>
         </nav>
