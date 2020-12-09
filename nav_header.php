@@ -142,7 +142,7 @@
 </header>
 
 <?php
-echo basename($_SERVER['PHP_SELF']);
+
 ?>
 <div class="d-flex align-items-stretch">
     <!-- Sidebar Navigation-->
@@ -160,7 +160,7 @@ echo basename($_SERVER['PHP_SELF']);
 
 
 <?php
-$paginanaam = basename('test.php', '.php');
+$paginanaam = basename(basename($_SERVER['PHP_SELF']), '.php');
 $paginas = array
 (
 
