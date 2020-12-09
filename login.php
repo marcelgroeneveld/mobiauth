@@ -29,7 +29,7 @@
           <div class='icon'>
             <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/user_icon_copy.png'>
           </div>
-          <input placeholder='Gebruikersnaam' name="username" type='text' id='UsuarioInput'>
+          <input placeholder='E-mail' name="username" type='text' id='UsuarioInput'>
           <div class='validation'>
             <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/tick.png'>
           </div>
