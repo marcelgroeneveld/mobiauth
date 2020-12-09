@@ -144,7 +144,6 @@
 <?php
 echo basename($_SERVER['PHP_SELF']);
 ?>
-
 <div class="d-flex align-items-stretch">
     <!-- Sidebar Navigation-->
     <nav id="sidebar">
@@ -158,6 +157,33 @@ echo basename($_SERVER['PHP_SELF']);
         </div>
         <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
         <ul class="list-unstyled">
+
+
+<?php
+$paginanaam = basename('test.php', '.php');
+$paginas = array
+(
+    "home" => array
+    (
+        "url" => "mobiauth.nl",
+        "titel" => "Home",
+        "icon" => "",
+    ),
+    "gebruikers" => array
+    (
+        "url" => "/gebruikers",
+        "titel" => "Gebruikers",
+        "icon" => "",
+    )
+);
+
+
+foreach($paginas as $value){
+    echo '<li'; if($paginanaam == $value["url"]){ echo ' class="active"'}; echo '><a href="index.html"> <i class="icon-home"></i>Home </a></li>';
+    echo $value["url"];
+}
+?>
+
             <li class="active"><a href="index.html"> <i class="icon-home"></i>Home </a></li>
             <li><a href="/gebruikers"> <i class="icon-user"></i>Gebruikers </a></li>
             <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts </a></li>
