@@ -26,7 +26,7 @@ if ( !isset($_POST['username'], $_POST['password']) ) {
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-if ($stmt = $con->prepare('SELECT uid, password, voornaam, achternaam, 2fa FROM users WHERE username = ?')) {
+if ($stmt = $con->prepare('SELECT gebruiker_id, Voornaam, achternaam, Email, Wachtwoord FROM Gebruikers WHERE Email = ?')) {
     // Bind parameters (s = string, i = int, b = blob)
     $stmt->bind_param('s', $username);
     $stmt->execute();
@@ -34,16 +34,16 @@ if ($stmt = $con->prepare('SELECT uid, password, voornaam, achternaam, 2fa FROM 
     $stmt->store_result();
 
     if ($stmt->num_rows > 0) {
-        $stmt->bind_result($id, $password, $voornaam, $achternaam, $tfa);
+        $stmt->bind_result($id, $voornaam, $achternaam, $email, $wachtwoord);
         $stmt->fetch();
-        if (password_verify($_POST['password'], $password)) {
+        if (password_verify($_POST['password'], $wachtwoord)) {
             session_regenerate_id();
             $_SESSION['loggedin'] = TRUE;
-            $_SESSION['name'] = $_POST['username'];
+            $_SESSION['name'] = $email  ;
             $_SESSION['uid'] = $id;
             $_SESSION['voornaam'] = $voornaam;
             $_SESSION['achternaam'] = $achternaam;
-            $_SESSION['tfa'] = $tfa;
+            $_SESSION['tfa'] = false;
             echo 'true';
         } else {
             // Hier is wachtwoord onjuist
