@@ -151,7 +151,7 @@
         <div class="sidebar-header d-flex align-items-center">
             <div class="avatar"><img src="img/avatar-6.jpg" alt="..." class="img-fluid rounded-circle"></div>
             <div class="title">
-                <h1 class="h5">Mark Stephen</h1>
+                <h1 class="h5"><?php echo $_SESSION["voornaam"] . " " . $_SESSION["achternaam"] ?></h1>
                 <p>Web Designer</p>
             </div>
         </div>
@@ -160,7 +160,7 @@
 
 
 <?php
-$paginanaam = basename($_SERVER['PHP_SELF']);
+$paginanaam = basename($_SERVER['PHP_SELF'] );
 $paginas = array
 (
 
@@ -183,7 +183,6 @@ $paginas = array
 
 
 foreach($paginas as $value){
-    echo $paginanaam;
 
     echo '<li'; if($paginanaam == $value["php_url"]){ echo ' class="active"';} echo '><a href="' . $value["url"] .'"> <i class="icon-home"></i>' . $value["titel"] .' </a></li>';
 }
