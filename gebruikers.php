@@ -435,6 +435,7 @@
   </div>
   <!-- JavaScript files-->
   <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
   <script src="vendor/popper.js/umd/popper.min.js"> </script>
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
   <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
