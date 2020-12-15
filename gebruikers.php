@@ -128,7 +128,7 @@
 
       $(document).ready(function() {
           var table = $('#example').DataTable( {
-              "ajax": "../ajax/data/objects.txt",
+              "ajax": "https://mobiauth.nl/api/userdata",
               "columns": [
                   {
                       "className":      'details-control',

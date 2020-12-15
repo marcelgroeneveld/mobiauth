@@ -30,7 +30,7 @@
     <execution />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="40601" />
+    <option name="totalTimeSeconds" value="40774" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -88,7 +88,7 @@
       <workItem from="1606253325283" duration="1838000" />
       <workItem from="1606312513982" duration="718000" />
       <workItem from="1607519715878" duration="6835000" />
-      <workItem from="1608058895534" duration="11799000" />
+      <workItem from="1608058895534" duration="11972000" />
     </task>
     <servers />
   </component>

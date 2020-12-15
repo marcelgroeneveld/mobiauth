@@ -4,7 +4,7 @@ $DATABASE_USER = 'mobiauth';
 $DATABASE_PASS = '2O9n9f*n';
 $DATABASE_NAME = 'mobiauth';
 
-
+header('Content-Type: application/json');
 
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 
