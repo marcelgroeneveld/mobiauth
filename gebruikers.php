@@ -108,6 +108,24 @@
   <script src="js/front.js"></script>
   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
   <script>
+      function format ( d ) {
+          // `d` is the original data object for the row
+          return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
+              '<tr>'+
+              '<td>Full name:</td>'+
+              '<td>'+d.name+'</td>'+
+              '</tr>'+
+              '<tr>'+
+              '<td>Extension number:</td>'+
+              '<td>'+d.extn+'</td>'+
+              '</tr>'+
+              '<tr>'+
+              '<td>Extra info:</td>'+
+              '<td>And any further details here (images etc)...</td>'+
+              '</tr>'+
+              '</table>';
+      }
+
       $(document).ready(function() {
           var table = $('#example').DataTable({
               'ajax': 'https://gyrocode.github.io/files/jquery-datatables/objects.json',
