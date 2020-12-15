@@ -30,7 +30,7 @@ if ($stmt = $con->prepare('SELECT gebruiker_id, Voornaam, achternaam, Email FROM
         $d[] = array('uid' => "$id" ,'voornaam' => "$voornaam");
 
         $json = json_encode($d);
-        return $json;
+        echo $json;
     }
 
 }
