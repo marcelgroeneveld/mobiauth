@@ -17,9 +17,11 @@ if ($stmt = $con->prepare('SELECT gebruiker_id, Voornaam, achternaam, Email FROM
 
     if ($stmt->num_rows > 0) {
         $stmt->bind_result($id, $voornaam, $achternaam, $email);
-        $stmt->fetch();
+
     }
-    while ($row_data = $stmt->fetch_assoc()) {
+    $result = $stmt->get_result();
+
+    while ($assoc = $result->fetch_assoc()) {
 
         $JsonOutArray[] = array(
             "uid" => $row_data['gebruiker_id'],
