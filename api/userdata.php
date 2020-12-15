@@ -19,17 +19,20 @@ if ($stmt = $con->prepare('SELECT gebruiker_id, Voornaam, achternaam, Email FROM
         $stmt->bind_result($id, $voornaam, $achternaam, $email);
 
     }
+
+
     while ($stmt->fetch()) {
         echo 'ja';
-        $JsonOutArray[] = array(
-            "uid" => $id,
-            "voornaam" => $voornaam,
 
-        );
+        $d = array();
+
+        // This appends a new element to $d, in this case the value is another array
+        $d[] = array('uid' => "$id" ,'voornaam' => "$voornaam");
+
+        $json = json_encode($d);
+
+
     }
-    json_encode($JsonOutArray);
-    return $JsonOutArray;
-
 
 }
 $stmt->close();
