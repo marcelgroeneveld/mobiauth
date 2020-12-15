@@ -136,10 +136,8 @@
                       "data":           null,
                       "defaultContent": ''
                   },
-                  { "data": "name" },
-                  { "data": "position" },
-                  { "data": "office" },
-                  { "data": "salary" }
+                  { "data": "uid" },
+                  { "data": "voornaam" }
               ],
               "order": [[1, 'asc']]
           } );
