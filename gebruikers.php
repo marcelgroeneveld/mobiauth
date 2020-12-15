@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="css/custom.css">
       <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
 
-      <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+
     <!-- Favicon-->
     <link rel="shortcut icon" href="img/favicon.ico">
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
@@ -100,14 +100,13 @@
           src="https://code.jquery.com/jquery-3.5.1.min.js"
           integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
           crossorigin="anonymous"></script>
-  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
   <script src="vendor/popper.js/umd/popper.min.js"> </script>
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
   <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
   <script src="vendor/chart.js/Chart.min.js"></script>
   <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
   <script src="js/front.js"></script>
-
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
   <script>
       $(document).ready(function() {
           var table = $('#example').DataTable({
