@@ -18,17 +18,16 @@ if ($stmt = $con->prepare('SELECT gebruiker_id, Voornaam, achternaam, Email FROM
     if ($stmt->num_rows > 0) {
         $stmt->bind_result($id, $voornaam, $achternaam, $email);
         $stmt->fetch();
-
-        while ($row_data = $stmt->fetch_assoc()) {
-
-            $JsonOutArray[] = array(
-                "uid" => $row_data['gebruiker_id'],
-                "voornaam" => $row_data['Voornaam']
-
-            );
-        }
-        return $JsonOutArray;
     }
+    while ($row_data = $stmt->fetch_assoc()) {
+
+        $JsonOutArray[] = array(
+            "uid" => $row_data['gebruiker_id'],
+            "voornaam" => $row_data['Voornaam']
+
+        );
+    }
+    return $JsonOutArray;
 }
 $stmt->close();
 
