@@ -45,7 +45,6 @@
       <section class="no-padding-top">
           <div class="container-fluid">
               <div class="row">
-                  <div class="col-lg-6">
                       <div class="block margin-bottom-sm">
                           <div class="title"><strong>Basic Table</strong></div>
                           <div class="table-responsive">
@@ -416,7 +415,7 @@
                               </table>
                           </div>
                       </div>
-                  </div>
+
 
 
 
