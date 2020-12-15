@@ -108,6 +108,7 @@
   <script src="js/front.js"></script>
   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
   <script>
+      * Formatting function for row details - modify as you need */
       function format ( d ) {
           // `d` is the original data object for the row
           return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
@@ -127,66 +128,40 @@
       }
 
       $(document).ready(function() {
-          var table = $('#example').DataTable({
-              'ajax': 'https://gyrocode.github.io/files/jquery-datatables/objects.json',
-              'columns': [
+          var table = $('#example').DataTable( {
+              "ajax": "../ajax/data/objects.txt",
+              "columns": [
                   {
-                      'className':      'details-control',
-                      'orderable':      false,
-                      'data':           null,
-                      'defaultContent': ''
+                      "className":      'details-control',
+                      "orderable":      false,
+                      "data":           null,
+                      "defaultContent": ''
                   },
-                  { 'data': 'name' },
-                  { 'data': 'position' },
-                  { 'data': 'office' },
-                  { 'data': 'salary' }
+                  { "data": "name" },
+                  { "data": "position" },
+                  { "data": "office" },
+                  { "data": "salary" }
               ],
-              'order': [[1, 'asc']]
+              "order": [[1, 'asc']]
           } );
 
           // Add event listener for opening and closing details
-          $('#example tbody').on('click', 'td.details-control', function(){
+          $('#example tbody').on('click', 'td.details-control', function () {
               var tr = $(this).closest('tr');
               var row = table.row( tr );
 
-              if(row.child.isShown()){
+              if ( row.child.isShown() ) {
                   // This row is already open - close it
                   row.child.hide();
                   tr.removeClass('shown');
-              } else {
+              }
+              else {
                   // Open this row
-                  row.child(format(row.data())).show();
+                  row.child( format(row.data()) ).show();
                   tr.addClass('shown');
               }
-          });
-
-          // Handle click on "Expand All" button
-          $('#btn-show-all-children').on('click', function(){
-              // Enumerate all rows
-              table.rows().every(function(){
-                  // If row has details collapsed
-                  if(!this.child.isShown()){
-                      // Open this row
-                      this.child(format(this.data())).show();
-                      $(this.node()).addClass('shown');
-                  }
-              });
-          });
-
-          // Handle click on "Collapse All" button
-          $('#btn-hide-all-children').on('click', function(){
-              // Enumerate all rows
-              table.rows().every(function(){
-                  // If row has details expanded
-                  if(this.child.isShown()){
-                      // Collapse row details
-                      this.child.hide();
-                      $(this.node()).removeClass('shown');
-                  }
-              });
-          });
-      });
-
+          } );
+      } );
   </script>
   <style>
       td.details-control {
