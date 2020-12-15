@@ -137,7 +137,7 @@
                       "defaultContent": ''
                   },
                   { "data": "uid" },
-                  { "data": "voornaam" }
+                  { "data": "voojjrnaam" }
               ],
               "order": [[1, 'asc']]
           } );
