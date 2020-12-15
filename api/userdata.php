@@ -26,7 +26,7 @@ if ($stmt = $con->prepare('SELECT gebruiker_id, Voornaam, achternaam, Email FROM
 
         );
     }
-
+    json_encode($JsonOutArray);
     return $JsonOutArray;
 
 
