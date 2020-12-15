@@ -31,7 +31,8 @@ if ($stmt = $con->prepare('SELECT gebruiker_id, Voornaam, achternaam, Email FROM
 
     }
     $json = json_encode($d);
-    echo $json;
+    $output = json_encode(['data' => $json]);
+    echo $output;
 
 }
 $stmt->close();
