@@ -113,11 +113,11 @@
           return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
               '<tr>'+
               '<td>Full name:</td>'+
-              '<td>'+d.name+'</td>'+
+              '<td>'+d.uid+'</td>'+
               '</tr>'+
               '<tr>'+
               '<td>Extension number:</td>'+
-              '<td>'+d.extn+'</td>'+
+              '<td>'+d.uid+'</td>'+
               '</tr>'+
               '<tr>'+
               '<td>Extra info:</td>'+
@@ -137,7 +137,7 @@
                       "defaultContent": ''
                   },
                   { "data": "uid" },
-                  { "data": "voojjrnaam" }
+                  { "data": "voornaam" }
               ],
               "order": [[1, 'asc']]
           } );
