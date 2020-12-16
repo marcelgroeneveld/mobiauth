@@ -5,6 +5,8 @@ require_once 'config.inc.php';
 $email = $_SESSION['email'];
 $password = $_SESSION['password'];
 
+echo $email;
+echo $password;
 
 $result1 = $conn->prepare("SELECT * FROM Gebruikers WHERE Email = ? AND Wachtwoord = ?");
 if ($result1->num_rows > 0) {
