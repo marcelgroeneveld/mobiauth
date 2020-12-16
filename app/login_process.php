@@ -5,7 +5,7 @@ if(isset($_POST)) {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    if ($stmt = $con->prepare('SELECT Email, Wachtwoord FROM Gebruikers WHERE Email = ?')) {
+    if ($stmt = $conn->prepare('SELECT Email, Wachtwoord FROM Gebruikers WHERE Email = ?')) {
         // Bind parameters (s = string, i = int, b = blob)
         $stmt->bind_param('s', $email);
         $stmt->execute();
