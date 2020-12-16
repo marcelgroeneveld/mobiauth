@@ -26,7 +26,10 @@ if ($stmt = $con->prepare('SELECT gebruiker_id, Voornaam, achternaam, Email FROM
 
 
         // This appends a new element to $d, in this case the value is another array
-        $d[] = array('uid' => "$id" ,'voornaam' => "$voornaam");
+        $d[] = array('uid' => "$id",
+            'voornaam' => "$voornaam",
+            'achternaam' => "$achternaam",
+            'email' => "$email");
 
 
     }
