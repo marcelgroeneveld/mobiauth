@@ -49,9 +49,9 @@
           <div class="container-fluid">
               <div class="row">
                       <div class="block margin-bottom-sm">
-                          <div class="title"><strong>Basic Table</strong></div>
+                          <div class="title"><strong>Gebruikers binnen uw organisatie.</strong></div>
                           <div class="table-responsive">
-                              <h3><a target="_blank" href="https://www.gyrocode.com/articles/jquery-datatables-how-to-expand-collapse-all-child-rows/">jQuery DataTables: How to expand/collapse all child rows</a> <small>Regular table</small></h3>
+                              <h3><a target="_blank" href="https://www.gyrocode.com/articles/jquery-datatables-how-to-expand-collapse-all-child-rows/"></h3>
 
                               <button id="btn-show-all-children" type="button">Expand All</button>
                               <button id="btn-hide-all-children" type="button">Collapse All</button>
