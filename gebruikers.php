@@ -62,8 +62,6 @@
                                       <th></th>
                                       <th>Name</th>
                                       <th>Position</th>
-                                      <th>Office</th>
-                                      <th>Salary</th>
                                   </tr>
                                   </thead>
                                   <tfoot>
@@ -71,8 +69,6 @@
                                       <th></th>
                                       <th>Name</th>
                                       <th>Position</th>
-                                      <th>Office</th>
-                                      <th>Salary</th>
                                   </tr>
                                   </tfoot>
                               </table>
@@ -110,7 +106,20 @@
   <script>
       function format ( d ) {
           // `d` is the original data object for the row
-          return '';
+          return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
+              '<tr>'+
+              '<td>Full name:</td>'+
+              '<td>'+d.uid+'</td>'+
+              '</tr>'+
+              '<tr>'+
+              '<td>Extension number:</td>'+
+              '<td>'+d.uid+'</td>'+
+              '</tr>'+
+              '<tr>'+
+              '<td>Extra info:</td>'+
+              '<td>And any further details here (images etc)...</td>'+
+              '</tr>'+
+              '</table>';
       }
 
       $(document).ready(function() {
