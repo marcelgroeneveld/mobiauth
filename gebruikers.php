@@ -101,7 +101,7 @@
 
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label">Permissies <br><small class="text-primary">Als u niets aanvinkt kan de gebruiker alleen inloggen en de app gebruiken volgens uw instellingen.</small></label>
-                                    <br>
+                                    <div class="form-group">
                                     <div class="col-sm-9">
                                         <div>
                                             <input id="option" type="checkbox" value="">
@@ -125,6 +125,7 @@
                                             <input id="option" type="checkbox" value="">
                                             <label for="option">Is administrator(Globale beheerpermissies)</label>
                                         </div>
+                                    </div>
                                     </div>
 
                                 </div>
