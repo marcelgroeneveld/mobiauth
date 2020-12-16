@@ -12,7 +12,7 @@ if ($result1->num_rows > 0) {
     $row1 = mysqli_fetch_array($result1);
     $result1->close();
 } else {
-    echo "Error: row does not exist";
+    echo "Error: row does not exist?";
 }
 
 $uid = $row1['0'];
