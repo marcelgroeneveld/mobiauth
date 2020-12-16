@@ -1,3 +1,10 @@
+<?php
+
+$login_vereist = true;
+include("init.php");
+
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
