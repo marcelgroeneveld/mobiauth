@@ -1,8 +1,4 @@
 <?php
-if(PHP_SESSION_NONE){
-    session_start();
-}
-
 $db_host = 'localhost';
 $db_name = 'mobiauth';
 $db_password = '2O9n9f*n';
