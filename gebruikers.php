@@ -110,16 +110,16 @@
           // `d` is the original data object for the row
           return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
               '<tr>'+
-              '<td>Full name:</td>'+
+              '<td>Naam:</td>'+
+              '<td>'+d.voornaam+ ' '+d.achernaam+'</td>'+
+              '</tr>'+
+              '<tr>'+
+              '<td>Gebruikers-ID:</td>'+
               '<td>'+d.uid+'</td>'+
               '</tr>'+
               '<tr>'+
-              '<td>Extension number:</td>'+
-              '<td>'+d.uid+'</td>'+
-              '</tr>'+
-              '<tr>'+
-              '<td>Extra info:</td>'+
-              '<td>And any further details here (images etc)...</td>'+
+              '<td>Organisatie:</td>'+
+              '<td>'+d.organisatie+'</td>'+
               '</tr>'+
               '</table>';
       }
