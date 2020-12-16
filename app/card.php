@@ -5,15 +5,30 @@ require_once 'config.inc.php';
 $email = $_SESSION['email'];
 $password = $_SESSION['password'];
 
-$result1 = $conn->query("SELECT * FROM Gebruikers WHERE Email = '$email' AND Wachtwoord = '$password'");
 
-$row1 = mysqli_fetch_array($result1);
+$result1 = $conn->prepare("SELECT * FROM Gebruikers WHERE Email = ? AND Wachtwoord = ?");
+if ($result1->num_rows > 0) {
+    $result1->bind_param("ss", $email, $password);
+    $result1->execute();
+    $row1 = mysqli_fetch_array($result1);
+    $result1->close();
+} else {
+    echo "Error: row does not exist";
+}
 
 $uid = $row1['0'];
 
-$result2 = $conn->query("SELECT Organisaties.Organisatie_naam FROM Organisaties INNER JOIN Gebruikers ON Organisaties.Organisatie_id=Gebruikers.Organisatie WHERE Gebruikers.Gebruiker_id = '$uid'");
+$result2 = $conn->prepare("SELECT Organisaties.Organisatie_naam FROM Organisaties INNER JOIN Gebruikers ON Organisaties.Organisatie_id=Gebruikers.Organisatie WHERE Gebruikers.Gebruiker_id = ?");
+if ($result2->num_rows > 0) {
+    $result2->bind_param("s", $uid);
+    $result2->execute();
+    $row2 = mysqli_fetch_array($result2);
+    $result2->close();
+} else {
+    echo "Error: row does not exist";
+}
 
-$row2 = mysqli_fetch_array($result2);
+unset($_SESSION['password']);
 ?>
 <!doctype html>
 <html lang="en">
