@@ -5,17 +5,24 @@ require_once 'config.inc.php';
 $email = $_SESSION['email'];
 $password = $_SESSION['password'];
 
-$result1 = $conn->prepare("SELECT * FROM Gebruikers WHERE Email = ? AND Wachtwoord = ?");
-$result1->bind_param("ss", $email, $password);
-$result1->execute();
+$stmt1 = $conn->prepare("SELECT * FROM Gebruikers WHERE Email = ? AND Wachtwoord = ?");
+$stmt1->bind_param("ss", $email, $password);
+$stmt1->execute();
+$result1 = $stmt1->get_result();
+if($result1->num_rows === 0) exit('No rows');
 $row1 = mysqli_fetch_array($result1);
 
 $uid = $row1['0'];
 
-$result2 = $conn->prepare("SELECT Organisaties.Organisatie_naam FROM Organisaties INNER JOIN Gebruikers ON Organisaties.Organisatie_id=Gebruikers.Organisatie WHERE Gebruikers.Gebruiker_id = ?");
-$result2->bind_param("s", $uid);
-$result2->execute();
+$stmt2 = $conn->prepare("SELECT Organisaties.Organisatie_naam FROM Organisaties INNER JOIN Gebruikers ON Organisaties.Organisatie_id=Gebruikers.Organisatie WHERE Gebruikers.Gebruiker_id = ?");
+$stmt2->bind_param("s", $uid);
+$stmt2->execute();
+$result2 = $stmt2->get_result();
+if($result2->num_rows === 0) exit('No rows');
 $row2 = mysqli_fetch_array($result2);
+
+$stmt1->close();
+$stmt2->close();
 ?>
 <!doctype html>
 <html lang="en">
