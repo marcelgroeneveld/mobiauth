@@ -5,14 +5,24 @@ require_once 'config.inc.php';
 $email = $_SESSION['email'];
 $password = $_SESSION['password'];
 
+<<<<<<< HEAD
+$result1 = $conn->prepare("SELECT * FROM Gebruikers WHERE Email = ? AND Wachtwoord = ?");
+$result1->bind_param("ss", $email, $password);
+$result1->execute();
+=======
 echo $email;
 echo $password;
 
 $result1 = $conn->prepare("SELECT Voornaam, Achternaam, Organisatie FROM Gebruikers WHERE Email = ? AND Wachtwoord = ?");
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> 4ac99ed5fd46c4a09f21afe9faa72b4acde2e018
+=======
+>>>>>>> 4ac99ed5fd46c4a09f21afe9faa72b4acde2e018
+>>>>>>> Stashed changes
 if ($result1->num_rows > 0) {
-    $result1->bind_param("ss", $email, $password);
-    $result1->execute();
-    $row1 = mysqli_fetch_array($result1);
+    $row1 = mysqli_fetch_assoc($result1);
     $result1->close();
 } else {
     echo "Error: row does not exist";
@@ -21,16 +31,14 @@ if ($result1->num_rows > 0) {
 $uid = $row1['0'];
 
 $result2 = $conn->prepare("SELECT Organisaties.Organisatie_naam FROM Organisaties INNER JOIN Gebruikers ON Organisaties.Organisatie_id=Gebruikers.Organisatie WHERE Gebruikers.Gebruiker_id = ?");
+$result2->bind_param("s", $uid);
+$result2->execute();
 if ($result2->num_rows > 0) {
-    $result2->bind_param("s", $uid);
-    $result2->execute();
-    $row2 = mysqli_fetch_array($result2);
+    $row2 = mysqli_fetch_assoc($result2);
     $result2->close();
 } else {
     echo "Error: row does not exist";
 }
-
-unset($_SESSION['password']);
 ?>
 <!doctype html>
 <html lang="en">
@@ -56,7 +64,7 @@ unset($_SESSION['password']);
                     <p>Organisatie: <?=$row2['0']?></p>
             </div>
             <div class="col-12 click_card">
-                <p class="text-center">Eigendom van MobiAuth B.V.</p>
+                <p class="text-center">Eigendom van <?=$row2['0']?></p>
                 <a href="print.php">
                 <img src="images/rfid.png" class="card rounded mx-auto d-block" alt="empty_card">
                 </a>
