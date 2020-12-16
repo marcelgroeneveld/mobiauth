@@ -9,7 +9,6 @@ $result1 = $conn->prepare("SELECT * FROM Gebruikers WHERE Email = ? AND Wachtwoo
 $result1->bind_param("ss", $email, $password);
 $result1->execute();
 $row1 = mysqli_fetch_array($result1);
-$result1->close();
 
 $uid = $row1['0'];
 
@@ -17,7 +16,6 @@ $result2 = $conn->prepare("SELECT Organisaties.Organisatie_naam FROM Organisatie
 $result2->bind_param("s", $uid);
 $result2->execute();
 $row2 = mysqli_fetch_array($result2);
-$result2->close();
 ?>
 <!doctype html>
 <html lang="en">
