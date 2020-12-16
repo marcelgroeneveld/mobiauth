@@ -82,12 +82,50 @@
                         <div class="block-body">
                             <form>
                                 <div class="form-group">
-                                    <label class="form-control-label">Email</label>
-                                    <input type="email" placeholder="Email Address" class="form-control">
+                                    <label class="form-control-label">Voornaam</label>
+                                    <input type="text" placeholder="Piet" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-control-label">Password</label>
-                                    <input type="password" placeholder="Password" class="form-control">
+                                    <label class="form-control-label">Achternaam</label>
+                                    <input type="text" placeholder="De Vries" class="form-control">
+                                </div>
+                                <div class="line"></div>
+                                <div class="form-group">
+                                    <label class="form-control-label">Email</label>
+                                    <input type="email" placeholder="piet@devries.nl" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-control-label">Wachtwoord</label>
+                                    <input type="password" placeholder="Een veilig wachtwoord.." class="form-control">
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">Checkboxes and radios <br><small class="text-primary">Normal Bootstrap elements</small></label>
+                                    <div class="col-sm-9">
+                                        <div>
+                                            <input id="option" type="checkbox" value="">
+                                            <label for="option">Kan eigen gegevens bekijken/aanpassen</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <div>
+                                            <input id="option" type="checkbox" value="">
+                                            <label for="option">Kan logboeken bekijken</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <div>
+                                            <input id="option" type="checkbox" value="">
+                                            <label for="option">Kan gebruikers toevoegen/verwijderen</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <div>
+                                            <input id="option" type="checkbox" value="">
+                                            <label for="option">Is administrator(Globale beheerpermissies)</label>
+                                        </div>
+                                    </div>
+
                                 </div>
                                 <div class="form-group">
                                     <input type="submit" value="Signin" class="btn btn-primary">
