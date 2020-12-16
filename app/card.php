@@ -6,6 +6,8 @@ $email = $_SESSION['email'];
 $password = $_SESSION['password'];
 
 $result = $conn->query("SELECT * FROM Gebruikers WHERE Email = '$email' AND Wachtwoord = '$password'");
+
+$row = mysqli_fetch_array($result)
 ?>
 <!doctype html>
 <html lang="en">
@@ -27,9 +29,7 @@ $result = $conn->query("SELECT * FROM Gebruikers WHERE Email = '$email' AND Wach
     <div class="container">
         <div class="row text-white">
             <div class="col-12">
-                <? while ($row = mysqli_fetch_array($result)) { ?>
-                    <p>Welkom: <?=$row['Voornaam']?> <?=$row['Achternaam']?></p>
-                <?php } ?>
+                    <p>Welkom: <?=$row['1']?> <?=$row['2']?></p>
             </div>
             <div class="col-12 click_card">
                 <p class="text-center">Eigendom van MobiAuth B.V.</p>
