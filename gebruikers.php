@@ -60,15 +60,17 @@
                                   <thead>
                                   <tr>
                                       <th></th>
-                                      <th>Name</th>
-                                      <th>Position</th>
+                                      <th>Voornaam</th>
+                                      <th>Achternaam</th>
+                                      <th>E-mail</th>
                                   </tr>
                                   </thead>
                                   <tfoot>
                                   <tr>
                                       <th></th>
-                                      <th>Name</th>
-                                      <th>Position</th>
+                                      <th>Voornaam</th>
+                                      <th>Achternaam</th>
+                                      <th>E-mail</th>
                                   </tr>
                                   </tfoot>
                               </table>
@@ -132,8 +134,9 @@
                       "data":           null,
                       "defaultContent": ''
                   },
-                  { "data": "uid" },
-                  { "data": "voornaam" }
+                  { "data": "voornaam" },
+                  { "data": "achternaam" },
+                  { "data": "email" }
               ],
               "order": [[1, 'asc']]
           } );
