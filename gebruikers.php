@@ -89,7 +89,7 @@
                                     <label class="form-control-label">Achternaam</label>
                                     <input type="text" placeholder="De Vries" class="form-control">
                                 </div>
-                                <div class="line"></div>
+                                <hr>
                                 <div class="form-group">
                                     <label class="form-control-label">Email</label>
                                     <input type="email" placeholder="piet@devries.nl" class="form-control">
