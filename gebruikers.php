@@ -185,7 +185,7 @@
         return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
             '<tr>'+
             '<td>Naam:</td>'+
-            '<td>'+d.voornaam+ ' '+d.achernaam+'</td>'+
+            '<td>'+d.voornaam+ ' '+d.achternaam+'</td>'+
             '</tr>'+
             '<tr>'+
             '<td>Gebruikers-ID:</td>'+
