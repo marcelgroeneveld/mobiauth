@@ -1,6 +1,11 @@
 <?php
 require_once 'session.inc.php';
 require_once 'config.inc.php';
+
+$email = $_SESSION['email'];
+$password = $_SESSION['password'];
+
+$result = $conn->query("SELECT * FROM Gebruikers WHERE Email = '$email' AND Wachtwoord = '$password'");
 ?>
 <!doctype html>
 <html lang="en">
@@ -22,7 +27,9 @@ require_once 'config.inc.php';
     <div class="container">
         <div class="row text-white">
             <div class="col-12">
-                <p>Welkom: <?=$_SESSION['email'];?></p>
+                <? while ($row = mysqli_fetch_array($result)) { ?>
+                    <p>Welkom: <?=$row['Voornaam']?> <?=$row['Achternaam']?></p>
+                <?php } ?>
             </div>
             <div class="col-12 click_card">
                 <p class="text-center">Eigendom van MobiAuth B.V.</p>

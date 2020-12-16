@@ -10,6 +10,7 @@ if(isset($_POST)) {
     if (mysqli_num_rows($result) == 1) {
         session_start();
         $_SESSION['email'] = $email;
+        $_SESSION['password'] = $password;
         header("Location:card.php");
     } else {
         header("Location:index.php");
