@@ -21,11 +21,11 @@
                 <img src="images/Mobiauth.png" class="logo mx-auto d-block" alt="MobiAuth_Logo">
             </div>
             <div class="col-12 inputs_login">
-                <input type="text" class="input_login mx-auto d-block" placeholder="Gebruikersnaam">
-                <input type="password" class="input_login mx-auto d-block" placeholder="Wachtwoord">
-                <a href="card.php">
-                <input type="button" class="input_login button_login mx-auto d-block" value="Login">
-                </a>
+                <form action="login_process.php" method="post">
+                    <input type="text" class="input_login mx-auto d-block" placeholder="Gebruikersnaam" name="email">
+                    <input type="password" class="input_login mx-auto d-block" placeholder="Wachtwoord" name="password">
+                    <input type="submit" class="input_login button_login mx-auto d-block" value="Login">
+                </form>
             </div>
         </div>
     </div>
