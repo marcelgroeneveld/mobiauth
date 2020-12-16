@@ -100,7 +100,8 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Checkboxes and radios <br><small class="text-primary">Normal Bootstrap elements</small></label>
+                                    <label class="col-sm-3 form-control-label">Permissies <br><small class="text-primary">Als u niets aanvinkt kan de gebruiker alleen inloggen en de app gebruiken volgens uw instellingen.</small></label>
+                                    <br>
                                     <div class="col-sm-9">
                                         <div>
                                             <input id="option" type="checkbox" value="">
@@ -126,6 +127,21 @@
                                         </div>
                                     </div>
 
+                                </div>
+                                <hr>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">Toegang tot: <br><small class="text-primary">Dit zijn verbonden MobiAuth scanners, houdt 'CONTROL' ingedrukt om meerdere te selecteren.</small></label>
+                                    <div class="col-sm-9 ml-auto">
+                                        <select multiple="" class="form-control">
+                                            <option>Hoofdingang</option>
+                                            <option>Congiergekantoor</option>
+                                            <option>Voorraadhok</option>
+                                            <option>Administratiekantoor</option>
+                                            <option>Printerkamer</option>
+                                            <option>Kantoor van piet</option>
+                                            <option>Vergaderzalen</option>
+                                        </select>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <input type="submit" value="Signin" class="btn btn-primary">
