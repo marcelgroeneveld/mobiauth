@@ -9,7 +9,7 @@ $result1 = $conn->prepare("SELECT Voornaam, Achternaam FROM Gebruikers WHERE Ema
 $result1->bind_param("ss", $email, $password);
 $result1->execute();
 if ($result1->num_rows > 0) {
-    $row1 = mysqli_fetch_assoc($result1);
+    $row1 = mysqli_fetch_array($result1);
     $result1->close();
 } else {
     echo "Error: row does not exist";
@@ -21,7 +21,7 @@ $result2 = $conn->prepare("SELECT Organisaties.Organisatie_naam FROM Organisatie
 $result2->bind_param("s", $uid);
 $result2->execute();
 if ($result2->num_rows > 0) {
-    $row2 = mysqli_fetch_assoc($result2);
+    $row2 = mysqli_fetch_array($result2);
     $result2->close();
 } else {
     echo "Error: row does not exist";
