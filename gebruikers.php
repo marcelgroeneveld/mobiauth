@@ -138,8 +138,7 @@
                                             <option>Congiergekantoor</option>
                                             <option>Voorraadhok</option>
                                             <option>Administratiekantoor</option>
-                                            <option>Printerkamer</option>
-                                            <option>Kantoor van piet</option>
+                                             <option>Kantoor van piet</option>
                                             <option>Vergaderzalen</option>
                                         </select>
                                     </div>
