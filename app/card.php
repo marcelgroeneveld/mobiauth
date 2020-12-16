@@ -36,7 +36,7 @@ $row2 = mysqli_fetch_array($result2);
         <div class="row text-white">
             <div class="col-12">
                     <p>Welkom: <?=$row1['1']?> <?=$row1['2']?></p>
-                    <p>Organisatie: <?=$row2['1']?></p>
+                    <p>Organisatie: <?=$row2['0']?></p>
             </div>
             <div class="col-12 click_card">
                 <p class="text-center">Eigendom van MobiAuth B.V.</p>
