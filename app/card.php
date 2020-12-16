@@ -5,8 +5,8 @@ require_once 'config.inc.php';
 $email = $_SESSION['email'];
 $password = $_SESSION['password'];
 
-$stmt1 = $conn->prepare("SELECT * FROM Gebruikers WHERE Email = ? AND Wachtwoord = ?");
-$stmt1->bind_param("ss", $email, $password);
+$stmt1 = $conn->prepare("SELECT * FROM Gebruikers WHERE Email = ?");
+$stmt1->bind_param("s", $email);
 $stmt1->execute();
 $result1 = $stmt1->get_result();
 if($result1->num_rows === 0) exit('No rows');
