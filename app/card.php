@@ -5,9 +5,15 @@ require_once 'config.inc.php';
 $email = $_SESSION['email'];
 $password = $_SESSION['password'];
 
-$result = $conn->query("SELECT * FROM Gebruikers WHERE Email = '$email' AND Wachtwoord = '$password'");
+$result1 = $conn->query("SELECT * FROM Gebruikers WHERE Email = '$email' AND Wachtwoord = '$password'");
 
-$row = mysqli_fetch_array($result)
+$row1 = mysqli_fetch_array($result1);
+
+$uid = $row1['0'];
+
+$result2 = $conn->query("SELECT Organisaties.Organisatie_naam FROM Organisaties INNER JOIN Gebruikers ON Organisaties.Organisatie_id=Gebruikers.Organisatie WHERE Gebruikers.Gebruiker_id = '$uid'");
+
+$row2 = mysqli_fetch_array($result2);
 ?>
 <!doctype html>
 <html lang="en">
@@ -29,7 +35,8 @@ $row = mysqli_fetch_array($result)
     <div class="container">
         <div class="row text-white">
             <div class="col-12">
-                    <p>Welkom: <?=$row['1']?> <?=$row['2']?></p>
+                    <p>Welkom: <?=$row1['1']?> <?=$row1['2']?></p>
+                    <p>Organisatie: <?=$row1['0']?></p>
             </div>
             <div class="col-12 click_card">
                 <p class="text-center">Eigendom van MobiAuth B.V.</p>
