@@ -21,7 +21,7 @@ require_once 'session.inc.php';
     <div class="container">
         <div class="row text-white">
             <div class="col-12">
-                <p>Welkom: <?=$_SESSION['email'];?>></p>
+                <p>Welkom: <?=$_SESSION['email'];?></p>
             </div>
             <div class="col-12 click_card">
                 <p class="text-center">Eigendom van MobiAuth B.V.</p>
