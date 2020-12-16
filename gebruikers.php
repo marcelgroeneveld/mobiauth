@@ -49,9 +49,8 @@
           <div class="container-fluid">
               <div class="row">
                       <div class="block margin-bottom-sm">
-                          <div class="title"><strong>Basic Table</strong></div>
+                          <div class="title"><strong>Gebruikers binnen uw organisatie.</strong></div>
                           <div class="table-responsive">
-                              <h3><a target="_blank" href="https://www.gyrocode.com/articles/jquery-datatables-how-to-expand-collapse-all-child-rows/">jQuery DataTables: How to expand/collapse all child rows</a> <small>Regular table</small></h3>
 
                               <button id="btn-show-all-children" type="button">Expand All</button>
                               <button id="btn-hide-all-children" type="button">Collapse All</button>
@@ -60,19 +59,17 @@
                                   <thead>
                                   <tr>
                                       <th></th>
-                                      <th>Name</th>
-                                      <th>Position</th>
-                                      <th>Office</th>
-                                      <th>Salary</th>
+                                      <th>Voornaam</th>
+                                      <th>Achternaam</th>
+                                      <th>E-mail</th>
                                   </tr>
                                   </thead>
                                   <tfoot>
                                   <tr>
                                       <th></th>
-                                      <th>Name</th>
-                                      <th>Position</th>
-                                      <th>Office</th>
-                                      <th>Salary</th>
+                                      <th>Voornaam</th>
+                                      <th>Achternaam</th>
+                                      <th>E-mail</th>
                                   </tr>
                                   </tfoot>
                               </table>
@@ -112,16 +109,16 @@
           // `d` is the original data object for the row
           return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
               '<tr>'+
-              '<td>Full name:</td>'+
+              '<td>Naam:</td>'+
+              '<td>'+d.voornaam+ ' '+d.achernaam+'</td>'+
+              '</tr>'+
+              '<tr>'+
+              '<td>Gebruikers-ID:</td>'+
               '<td>'+d.uid+'</td>'+
               '</tr>'+
               '<tr>'+
-              '<td>Extension number:</td>'+
-              '<td>'+d.uid+'</td>'+
-              '</tr>'+
-              '<tr>'+
-              '<td>Extra info:</td>'+
-              '<td>And any further details here (images etc)...</td>'+
+              '<td>Organisatie:</td>'+
+              '<td>'+d.organisatie+'</td>'+
               '</tr>'+
               '</table>';
       }
@@ -136,8 +133,9 @@
                       "data":           null,
                       "defaultContent": ''
                   },
-                  { "data": "uid" },
-                  { "data": "voornaam" }
+                  { "data": "voornaam" },
+                  { "data": "achternaam" },
+                  { "data": "email" }
               ],
               "order": [[1, 'asc']]
           } );
