@@ -22,7 +22,7 @@
             </div>
             <div class="col-12 inputs_login">
                 <form action="login_process.php" method="post">
-                    <input type="text" class="input_login mx-auto d-block" placeholder="Gebruikersnaam" name="email">
+                    <input type="text" class="input_login mx-auto d-block" placeholder="E-mail" name="email">
                     <input type="password" class="input_login mx-auto d-block" placeholder="Wachtwoord" name="password">
                     <input type="submit" class="input_login button_login mx-auto d-block" value="Login">
                 </form>
