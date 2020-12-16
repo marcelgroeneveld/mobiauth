@@ -8,7 +8,7 @@ $password = $_SESSION['password'];
 echo $email;
 echo $password;
 
-$result1 = $conn->prepare("SELECT * FROM Gebruikers WHERE Email = ? AND Wachtwoord = ?");
+$result1 = $conn->prepare("SELECT Voornaam, Achternaam, Organisatie FROM Gebruikers WHERE Email = ? AND Wachtwoord = ?");
 if ($result1->num_rows > 0) {
     $result1->bind_param("ss", $email, $password);
     $result1->execute();
