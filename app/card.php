@@ -5,22 +5,15 @@ require_once 'config.inc.php';
 $email = $_SESSION['email'];
 $password = $_SESSION['password'];
 
-<<<<<<< HEAD
 $result1 = $conn->prepare("SELECT * FROM Gebruikers WHERE Email = ? AND Wachtwoord = ?");
 $result1->bind_param("ss", $email, $password);
 $result1->execute();
-=======
+
 echo $email;
 echo $password;
 
 $result1 = $conn->prepare("SELECT Voornaam, Achternaam, Organisatie FROM Gebruikers WHERE Email = ? AND Wachtwoord = ?");
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
->>>>>>> 4ac99ed5fd46c4a09f21afe9faa72b4acde2e018
-=======
->>>>>>> 4ac99ed5fd46c4a09f21afe9faa72b4acde2e018
->>>>>>> Stashed changes
+
 if ($result1->num_rows > 0) {
     $row1 = mysqli_fetch_assoc($result1);
     $result1->close();
