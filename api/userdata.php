@@ -1,8 +1,5 @@
 <?php
-$DATABASE_HOST = 'localhost';
-$DATABASE_USER = 'mobiauth';
-$DATABASE_PASS = '2O9n9f*n';
-$DATABASE_NAME = 'mobiauth';
+include("../auth.php");
 
 header('Content-Type: application/json');
 
@@ -24,8 +21,6 @@ if ($stmt = $con->prepare('SELECT gebruiker_id, Voornaam, achternaam, Email, Org
 
     while ($stmt->fetch()) {
 
-
-        // This appends a new element to $d, in this case the value is another array
         $d[] = array('uid' => "$id",
             'voornaam' => "$voornaam",
             'achternaam' => "$achternaam",
