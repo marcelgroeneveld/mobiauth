@@ -1,5 +1,9 @@
 <?php
-include("auth.php");
+$DATABASE_HOST = 'localhost';
+$DATABASE_USER = 'mobiauth';
+$DATABASE_PASS = '2O9n9f*n';
+$DATABASE_NAME = 'mobiauth';
+
 $deurnaam = $_POST['device_name'];
 $org_id   = $_POST['org_id'];
 
@@ -21,3 +25,5 @@ if ($stmt = $con->prepare('SELECT gebruiker_id, Voornaam, achternaam, Email, Org
         $stmt->bind_result($id, $voornaam, $achternaam, $email, $organisatie);
 
     }
+
+}
