@@ -27,3 +27,5 @@ if ($stmt = $con->prepare('SELECT gebruiker_id, Voornaam, achternaam, Email, Org
     }
 
 }
+
+echo 'true';
