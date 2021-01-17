@@ -26,7 +26,9 @@ if ($stmt = $con->prepare('SELECT Voornaam, Achternaam FROM Gebruikers WHERE pho
         $stmt->bind_result($voor, $achter);
         $stmt->fetch();
 
-        echo 'true-' .$voor. ' '.$achter;
+        echo $voor. ' '.$achter;
+    } else {
+        echo 'false';
     }
 
 }
