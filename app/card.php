@@ -14,7 +14,7 @@ $row1 = mysqli_fetch_array($result1);
 
 $uid = $row1['0'];
 
-$stmt2 = $conn->prepare("SELECT Organisaties.Organisatie_naam FROM Organisaties INNER JOIN Gebruikers ON Organisaties.Organisatie_id=Gebruikers.Organisatie WHERE Gebruikers.Gebruiker_id = ?");
+$stmt2 = $conn->prepare("SELECT O.Organisatie_naam FROM Organisaties O JOIN Gebruikers G ON O.Organisatie_id=G.Organisatie WHERE G.Gebruiker_id = ?");
 $stmt2->bind_param("s", $uid);
 $stmt2->execute();
 $result2 = $stmt2->get_result();
