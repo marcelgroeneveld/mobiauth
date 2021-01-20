@@ -21,7 +21,7 @@ if ($stmt = $con->prepare('SELECT Voornaam, Achternaam FROM Gebruikers WHERE pho
 
     $stmt->store_result();
 
-    if ($stmt->num_rows == 1) {
+    if ($stmt->num_rows > 0) {
         $stmt->bind_result($voor, $achter);
         $stmt->fetch();
 
