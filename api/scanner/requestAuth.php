@@ -32,7 +32,7 @@ if ($stmt = $con->prepare('SELECT Voornaam, Achternaam FROM Gebruikers WHERE pho
    $volnaam = $voor . $achter;
     $tijd = date('m/d/Y h:i:s a', time());
 
-    if ($stmt = $con->prepare('INSERT INTO logboek (naam, tijd, locatie) VALUES ?, ?, ?')) {
+    if ($stmt = $con->prepare('INSERT INTO logboek (naam, tijd, locatie) VALUES (?, ?, ?)')) {
         // Bind parameters (s = string, i = int, b = blob)
         $stmt->bind_param('sss', $volnaam, $tijd, $deurnaam);
         $stmt->execute();
