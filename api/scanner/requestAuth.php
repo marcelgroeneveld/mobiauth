@@ -6,7 +6,6 @@ $DATABASE_NAME = 'mobiauth';
 
 $deurnaam = $_POST['device_name'];
 $org_id   = $_POST['org_id'];
-
 $phoneID = $_POST['id'];
 
 
@@ -30,6 +29,20 @@ if ($stmt = $con->prepare('SELECT Voornaam, Achternaam FROM Gebruikers WHERE pho
     } else {
         echo 'false';
     }
+   $volnaam = $voor . $achter;
+    $tijd = date('m/d/Y h:i:s a', time());
+
+    if ($stmt = $con->prepare('INSERT INTO logboek (naam, tijd, locatie) VALUES ?, ?, ?')) {
+        // Bind parameters (s = string, i = int, b = blob)
+        $stmt->bind_param('sss', $volnaam, $tijd, $deurnaam);
+        $stmt->execute();
+
+
+
+
+    }
+
+
 
 }
 

@@ -185,6 +185,13 @@ $paginas = array
         "php_url" => "logs.php",
         "titel" => "Toegangslog",
         "icon" => "",
+    ),
+    "Lezers" => array
+    (
+        "url" => "/scanners",
+        "php_url" => "scanners.php",
+        "titel" => "Scanners beheren",
+        "icon" => "",
     )
 );
 
