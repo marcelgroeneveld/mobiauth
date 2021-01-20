@@ -179,7 +179,7 @@ $paginas = array
         "titel" => "Gebruikers",
         "icon" => "",
     ),
-    "gebruikers" => array
+    "logs" => array
     (
         "url" => "/logs",
         "php_url" => "logs.php",
